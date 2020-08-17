@@ -3,7 +3,7 @@
 <https://zhaozheng.shinyapps.io/testing_clt/>
 
 - The presentation slides which introduce my Shiny App can be found here:
-<http://rpubs.com/ZhaoZheng/649685>
+<http://rpubs.com/ZhaoZheng/649696>
 
 - For all the coding files, you could found them in this repo:
     - ui.R

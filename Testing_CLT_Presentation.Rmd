@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = FALSE)
 <https://github.com/ZhaoZ-2020/DevelopDataProducts>
 
 
-## Input and Output to my Shiny App
+## Input to my Shiny App
 
 ##### Users can choose the original distribution (where the sample will be drawn) from the four distributions below:
   
