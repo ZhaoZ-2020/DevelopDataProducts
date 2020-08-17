@@ -18,7 +18,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Introduction to my Shiny App
-- In my Shiny Application "Validate Central Limit Theorem using Simulation", users will be able to see how does the CLT work.
+- In my Shiny Application "Validate Central Limit Theorem using Simulation", users will be able to see how does the CLT work.  
+<https://zhaozheng.shinyapps.io/testing_clt/>
 
 - No matter which distribution the users choose to start with, the simulated sample means will be normally distributed. 
 
