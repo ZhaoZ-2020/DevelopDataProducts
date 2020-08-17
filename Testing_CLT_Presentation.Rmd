@@ -1,0 +1,63 @@
+---
+title: "Validate Central Limit Theorem using Simulation"
+author: "Zhao Zheng"
+date: "8/17/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## What is Central Limit Theorem?
+
+- If you have a population with mean $\mu$ and standard deviation $\sigma$ and take sufficiently large random samples (with sample size n) from the population with replacement, then the distribution of the **sample means** will be approximately normally distributed, with mean $\mu$ and standard deviation $\sigma/\sqrt{n}$. 
+
+- For more details on Central Limit Theorem, please referring to the Wikipedia link below:
+<https://en.wikipedia.org/wiki/Central_limit_theorem>
+
+
+## Introduction to my Shiny App
+- In my Shiny Application "Validate Central Limit Theorem using Simulation", users will be able to see how does the CLT work.
+
+- No matter which distribution the users choose to start with, the simulated sample means will be normally distributed. 
+
+- The effect will be more obvious with large number of simulation (even with a small sample size).
+
+- Please refer to the link below to my Github Repo, which includes all the coding files to my Shiny app and this presentation.  
+<https://github.com/ZhaoZ-2020/DevelopDataProducts>
+
+
+## Input and Output to my Shiny App
+
+##### Users can choose the original distribution (where the sample will be drawn) from the four distributions below:
+  
+    - Standard Normal Distribution 
+    - Poisson Distribution (with lambda = 1)
+    - Standard Uniform Distribution
+    - Binomial Distribution (with n=10 and p=0.5)
+
+##### Users will need to specifiy the sample size and the number of simulation they want to perform using the sliders provided.  
+  
+##### In addition, they can also indicate if they want to show the extra lines below in the output plots:
+  
+    - sample mean in the first density plot
+    - average of the sample mean in the second density plot
+    - density plot from a normal distribution (for comparison purpose)
+      
+
+## Output from my Shiny App
+
+See example below from standard Uniform distribution with n=5 and B=1000:
+
+```{r, echo=TRUE, fig.height=3}
+set.seed(123); par(mfrow=c(1,2)); n<-5; B<-1000
+x<-matrix(runif(n*B),nrow=B); xbar<-apply(x,1,mean)
+hist(x[1,],prob=TRUE,main="Density plot of one sample")
+hist(xbar,col='lightblue',prob=TRUE,main="Density plot of B sample means")
+```
+
+
+
+
+
